@@ -1,4 +1,5 @@
 # FIAP - Checkpoint 1 - API de Pedidos
+## Gabriel Machado Carrara Pimentel - RM 99880
 
 Este projeto é uma API RESTful desenvolvida como parte do checkpoint 1 do curso de Engenharia de Software da FIAP. A API permite gerenciar pedidos, incluindo operações como criar, consultar, atualizar e excluir pedidos.
 
