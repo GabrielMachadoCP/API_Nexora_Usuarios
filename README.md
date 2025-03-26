@@ -74,7 +74,7 @@ Cria um novo pedido com os dados fornecidos.
 {
   "clienteNome": "Gabriel Machado",
   "dataPedido": "2025-03-25",
-  "valorTotal": 150.50
+  "valorTotal": 150.75
 }
 ```
 ![Captura de tela 2025-03-25 222724](https://github.com/user-attachments/assets/f8697eb0-60ec-482e-9e47-991129a85bcb)
@@ -97,8 +97,8 @@ Altera um pedido com o id fornecido.
 
 ```json
 {
-  "clienteNome": "Vitor Hugo Rodrigues",
-  "dataPedido": "2025-03-21",
+  "clienteNome": "Vitor Goncalves",
+  "dataPedido": "2025-03-20",
   "valorTotal": 100.00
 }
 ```
