@@ -22,7 +22,7 @@ Para rodar o projeto localmente:
     cd fiap-checkpoint1
     ```
 
-2. Instale as dependências utilizando Maven (VScode) ou abra o projeto usando Intellij:
+2. Instale as dependências utilizando Maven (VScode) ou abra o projeto usando Intellij (Como eu fiz):
 
     ```bash
     mvn clean install
@@ -35,7 +35,12 @@ Para rodar o projeto localmente:
     ```
 
     A aplicação estará disponível em `http://localhost:8080/pedidos`.
-    Mostrando uma lista vazia
+    Mostrando uma lista vazia.
+
+## Configurações de banco de dados
+```json
+
+```
 
 ## Endpoints da API
 
