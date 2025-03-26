@@ -22,19 +22,20 @@ Para rodar o projeto localmente:
     cd fiap-checkpoint1
     ```
 
-2. Instale as dependências utilizando Maven:
+2. Instale as dependências utilizando Maven (VScode) ou abra o projeto usando Intellij:
 
     ```bash
     mvn clean install
     ```
 
-3. Execute a aplicação:
+3. Execute a aplicação (VScode):
 
     ```bash
     mvn spring-boot:run
     ```
 
-    A aplicação estará disponível em `http://localhost:8080`.
+    A aplicação estará disponível em `http://localhost:8080/pedidos`.
+    Mostrando uma lista vazia
 
 ## Endpoints da API
 
