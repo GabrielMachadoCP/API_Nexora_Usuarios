@@ -38,7 +38,7 @@ Para rodar o projeto localmente:
     Mostrando uma lista vazia.
 
 ## Configurações de banco de dados
-```json
+```
 spring.application.name=checkpoint1
 
 # Configuração do banco de dados H2
