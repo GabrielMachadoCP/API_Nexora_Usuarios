@@ -6,5 +6,5 @@ import br.com.fiap.checkpoint1.model.Pedido;
 import java.util.List;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
-    List<Pedido> findAllByOrderByValorTotalAsc();
+    List<Pedido> findAllByOrderByValorTotalDesc();
 }

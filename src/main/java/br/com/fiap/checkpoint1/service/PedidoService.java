@@ -32,6 +32,6 @@ public class PedidoService {
     }
 
     public List<Pedido> listarTodosPorValor() {
-        return pedidoRepository.findAllByOrderByValorTotalAsc();
+        return pedidoRepository.findAllByOrderByValorTotalDesc();
     }
 }
