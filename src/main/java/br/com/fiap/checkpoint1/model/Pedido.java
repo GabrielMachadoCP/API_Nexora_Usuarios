@@ -19,23 +19,22 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Pedido {
 
+    //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotNull
-    @NotBlank
+    @NotNull @NotBlank
     private String clienteNome;
-
+    @NotNull @NotBlank
     private LocalDate dataPedido = LocalDate.now();
-
+    private Produto produto;
     @Min(value = 0, message = "O valor total não pode ser negativo")
     private double valorTotal;
 
+    //Gets e Sets
     public @NotNull @NotBlank String getClienteNome() {
         return clienteNome;
     }
-
     public void setClienteNome(@NotNull @NotBlank String clienteNome) {
         this.clienteNome = clienteNome;
     }
@@ -47,5 +46,24 @@ public class Pedido {
 
     public void setValorTotal(@Min(value = 0, message = "O valor total não pode ser negativo") double valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    @NotNull @NotBlank
+    public LocalDate getDataPedido() {
+        return dataPedido;
+    }
+    @NotNull @NotBlank
+    public void setDataPedido(LocalDate dataPedido) {
+        this.dataPedido = dataPedido;
+    }
+
+    @NotNull @NotBlank
+    public Produto getProduto() {
+        return produto;
+    }
+
+    @NotNull @NotBlank
+    public void setProduto(Produto produto) {
+        this.produto = produto;
     }
 }

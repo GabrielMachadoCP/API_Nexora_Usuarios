@@ -44,6 +44,8 @@ public class PedidoController {
             Pedido pedido = pedidoExistente.get();
             pedido.setClienteNome(pedidoAtualizado.getClienteNome());
             pedido.setValorTotal(pedidoAtualizado.getValorTotal());
+            pedido.setDataPedido(pedidoAtualizado.getDataPedido());
+            pedido.setProduto(pedidoAtualizado.getProduto());
 
             Pedido pedidoSalvo = pedidoService.salvar(pedido);
             return ResponseEntity.ok(pedidoSalvo);
