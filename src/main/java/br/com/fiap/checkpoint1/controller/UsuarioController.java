@@ -1,10 +1,8 @@
 package br.com.fiap.checkpoint1.controller;
 
 import br.com.fiap.checkpoint1.model.Usuario;
-import br.com.fiap.checkpoint1.model.LoginDTO;
 import br.com.fiap.checkpoint1.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,7 +46,7 @@ public class UsuarioController {
             usuario.setNome(usuarioAtualizado.getNome());
             usuario.setCpf(usuarioAtualizado.getCpf());
             usuario.setEmail(usuarioAtualizado.getEmail());
-            usuario.setSenha(usuarioAtualizado.getSenha()); // criptografe a senha no service
+            usuario.setSenha(usuarioAtualizado.getSenha());
             Usuario usuarioSalvo = usuarioService.salvar(usuario);
             return ResponseEntity.ok(usuarioSalvo);
         } else {
@@ -62,14 +60,4 @@ public class UsuarioController {
         usuarioService.deletar(id);
     }
 
-    // Autenticação pelo CPF e senha - POST /usuarios/autenticar
-    @PostMapping("/autenticar")
-    public ResponseEntity<Usuario> autenticar(@RequestBody LoginDTO loginDTO) {
-        Optional<Usuario> usuario = usuarioService.autenticar(loginDTO.getCpf(), loginDTO.getSenha());
-        if (usuario.isPresent()) {
-            return ResponseEntity.ok(usuario.get());
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
-    }
 }
